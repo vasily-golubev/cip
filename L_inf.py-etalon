@@ -1,0 +1,24 @@
+#!/usr/bin/python
+
+# Author: Vasily Golubev <w.golubev@mail.ru>, (C) 2014
+H = H_TEMPLATE
+f_out = open('./summary-multi.txt', 'a')
+f_0 = open('./result/advection2d_000000.txt', 'r');
+f_1 = open('./result/advection2d_FILE_TEMPLATE.txt', 'r');
+l_0 = f_0.readlines()
+max = 0.0
+for v_0 in l_0:
+	arr_0 = v_0.split(' ')
+	v_1 = f_1.readline()
+	arr_1 = v_1.split(' ')
+	for ind in range(len(arr_0) - 1):
+		delta = abs(float(arr_1[ind]) - float(arr_0[ind]))
+		if (delta > max):
+			max = delta
+
+result = "Norm L_infinity = " + str(max * H * H)
+print result
+f_out.write(result + '\n');
+f_out.close()
+f_0.close()
+f_1.close()

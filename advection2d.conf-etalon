@@ -1,0 +1,79 @@
+verbose = false
+dt = DT_TEMPLATE
+steps = STEPS_TEMPLATE
+[grids]
+	[grid]
+		id = advection2d
+		derivatives = true
+		[node]
+			name = AdvMetaNode
+		[/node]
+		[material_node]
+		[/material_node]
+		[material]
+			c = 1
+		[/material]
+		[factory]
+			name = RectGridFactory
+			size = SIZE_TEMPLATE
+			origin = 0, 0
+			spacing = SPACING_TEMPLATE
+		[/factory]
+		[schema]
+			name = NAME_TEMPLATE
+		[/schema]
+		[fillers]
+			[filler]
+				name = RectPeriodFiller
+				axis = 0
+				side = 0
+			[/filler]
+			[filler]
+				name = RectPeriodFiller
+				axis = 0
+				side = 1
+			[/filler]
+			[filler]
+				name = RectPeriodFiller
+				axis = 1
+				side = 0
+			[/filler]
+			[filler]
+				name = RectPeriodFiller
+				axis = 1
+				side = 1
+			[/filler]
+		[/fillers]
+		[correctors]
+		[/correctors]
+	[/grid]
+[/grids]
+
+[contacts]
+[/contacts]
+
+[initials]
+	[initial]
+		order = 0
+		name = RegionInitial
+		[region]
+			name = RectRegion
+			min = 40, 40
+			max = 60, 60
+		[/region]
+		[data]
+			v = 1.0
+		[/data]
+	[/initial]
+[/initials]
+
+[savers]
+	[saver]
+		name = GnuplotSaver
+		path = /home/vgolubev/work/GitHub/cip/result/%g_%s.txt
+		order = 0
+		save = SAVE_TEMPLATE
+		params = v
+		norms = 0
+	[/saver]
+[/savers]
