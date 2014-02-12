@@ -1,0 +1,45 @@
+# Summary of tests.
+
+# 100 x 100
+AdvRectSchemaCIR
+Norm L1 = 576.186553065
+Norm L_infinity = 0.820254852894
+AdvRectSchemaCIPExt
+Norm L1 = 182.24550145
+Norm L_infinity = 0.982246485995
+AdvRectSchemaCIP23Ext
+Norm L1 = 163.594676982
+Norm L_infinity = 0.957505688037
+
+# 200 x 200
+AdvRectSchemaCIR
+Norm L1 = 432.163682252
+Norm L_infinity = 0.197688937
+AdvRectSchemaCIPExt
+Norm L1 = 874.385885007
+Norm L_infinity = 0.4567887
+AdvRectSchemaCIP23Ext
+Norm L1 = 100.895031782
+Norm L_infinity = 0.245975907
+
+# 400 x 400
+AdvRectSchemaCIR
+Norm L1 = 316.926714081
+Norm L_infinity = 0.048575009
+AdvRectSchemaCIPExt
+Norm L1 = 34754473.934
+Norm L_infinity = 5015.13161923
+AdvRectSchemaCIP23Ext
+Norm L1 = 57.4372157087
+Norm L_infinity = 0.0622088185547
+
+# 800 x 800
+AdvRectSchemaCIR
+Norm L1 = 230.101135553
+Norm L_infinity = 0.0120210022932
+AdvRectSchemaCIPExt
+Norm L1 = 7.21601509926e+16
+Norm L_infinity = 4.72174370365e+12
+AdvRectSchemaCIP23Ext
+Norm L1 = 32.6458692115
+Norm L_infinity = 0.0156136476317
