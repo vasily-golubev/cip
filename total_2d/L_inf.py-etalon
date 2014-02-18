@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 # Author: Vasily Golubev <w.golubev@mail.ru>, (C) 2014
-H = H_TEMPLATE
 f_out = open('./summary-multi.txt', 'a')
 f_0 = open('./result/advection2d_000000.txt', 'r');
 f_1 = open('./result/advection2d_FILE_TEMPLATE.txt', 'r');
@@ -15,7 +14,6 @@ for v_0 in l_0:
 		delta = abs(float(arr_1[ind]) - float(arr_0[ind]))
 		if (delta > max):
 			max = delta
-
 result = str(max)
 f_out.write(result + '\n');
 f_out.close()

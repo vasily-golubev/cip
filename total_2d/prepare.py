@@ -32,10 +32,8 @@ f_in = open('./L_inf.py-etalon', 'r');
 l_in = f_in.readlines()
 for l in l_in:
 	l_new = l
-	if (l.find('H_TEMPLATE') != -1):
-		l_new = l.replace('H_TEMPLATE', str(sys.argv[7]))
-	elif (l.find('FILE_TEMPLATE') != -1):
-		l_new = l.replace('FILE_TEMPLATE', str(sys.argv[8]))
+	if (l.find('FILE_TEMPLATE') != -1):
+		l_new = l.replace('FILE_TEMPLATE', str(sys.argv[7]))
 	f_out.write(l_new);
 f_out.close()
 f_in.close()

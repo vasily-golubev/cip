@@ -1,3 +1,4 @@
+#1D
 verbose = false
 dt = DT_TEMPLATE
 steps = STEPS_TEMPLATE

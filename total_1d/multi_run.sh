@@ -45,7 +45,7 @@
 # dt, steps, size, spacing, name, save, file
 NAME=""
 echo "Generated automatically." > summary-multi.txt
-NAME="AdvRectSchemaSymm4th"
+NAME="AdvRectSchemaFROMM"
 echo $NAME >> summary-multi.txt
 ./prepare.py 0.004 5001 100 0.02 $NAME 500 000500
 ./single_run.sh
