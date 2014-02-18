@@ -47,7 +47,7 @@ NAME=""
 echo "Generated automatically." > summary-multi.txt
 NAME="AdvRectSchemaFROMM"
 echo $NAME >> summary-multi.txt
-./prepare.py 0.004 5001 100 0.02 $NAME 500 000500
+./prepare.py 0.004 501 100 0.02 $NAME 500 000500
 ./single_run.sh
 ./prepare.py 0.002 1001 200 0.01 $NAME 1000 001000
 ./single_run.sh
