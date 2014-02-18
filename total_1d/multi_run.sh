@@ -42,20 +42,20 @@
 #	AdvRectSchemaWENO3
 
 # Prepare correct conf file and norms, single run.
-# dt, steps, size, spacing, name, save, h, file
+# dt, steps, size, spacing, name, save, file
 NAME=""
 echo "Generated automatically." > summary-multi.txt
 NAME="AdvRectSchemaSymm4th"
 echo $NAME >> summary-multi.txt
-./prepare.py 0.0005 64001 101 0.02 $NAME 64000 1 064000
+./prepare.py 0.004 5001 100 0.02 $NAME 500 000500
 ./single_run.sh
-./prepare.py 0.0005 32001 201 0.01 $NAME 32000 0.5 032000
+./prepare.py 0.002 1001 200 0.01 $NAME 1000 001000
 ./single_run.sh
-./prepare.py 0.0005 16001 401 0.005 $NAME 16000 0.25 016000
+./prepare.py 0.001 2001 400 0.005 $NAME 2000 002000
 ./single_run.sh
-./prepare.py 0.0005 8001 801 0.0025 $NAME 8000 0.125 008000
+./prepare.py 0.0005 4001 800 0.0025 $NAME 4000 004000
 ./single_run.sh
-./prepare.py 0.0005 4001 1601 0.00125 $NAME 4000 0.0625 004000
+./prepare.py 0.00025 8001 1600 0.00125 $NAME 8000 008000
 ./single_run.sh
 
 cat summary-multi.txt
