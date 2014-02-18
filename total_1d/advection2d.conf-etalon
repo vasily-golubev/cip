@@ -1,0 +1,76 @@
+verbose = false
+dt = DT_TEMPLATE
+steps = STEPS_TEMPLATE
+[grids]
+	[grid]
+		id = advection2d
+		derivatives = true
+		[node]
+			name = AdvMetaNode
+		[/node]
+		[material_node]
+		[/material_node]
+		[material]
+			c_x = 1
+		[/material]
+		[factory]
+			name = RectGridFactory
+			size = SIZE_TEMPLATE
+			origin = -1
+			spacing = SPACING_TEMPLATE
+		[/factory]
+		[schema]
+			name = NAME_TEMPLATE
+		[/schema]
+		[fillers]
+			[filler]
+				name = RectPeriodFiller
+				axis = 0
+			[/filler]
+		[/fillers]
+		[correctors]
+		[/correctors]
+	[/grid]
+[/grids]
+
+[contacts]
+[/contacts]
+
+[initials]
+	[initial]
+		order = 0
+		name = ImpulseInitial
+#		name = RegionInitial
+#		independent = true
+#		[region]
+#			name = RectRegion
+#			min = -1
+#			max = 1
+#		[/region]
+		[impulse]
+			name = Sin4Impulse
+			periods = 1
+		[/impulse]
+		[data]
+			v = 1.0
+		[/data]
+		center = 0
+		width = 2
+		dir = 1
+	[/initial]
+	[initial]
+		order = 1
+		name = DerivativeInitial
+	[/initial]
+[/initials]
+
+[savers]
+	[saver]
+		name = GnuplotSaver
+		path = /home/vgolubev/grid_convergence/cip/1d/total/result/%g_%s.txt
+		order = 0
+		save = SAVE_TEMPLATE
+		params = v
+		norms = 0
+	[/saver]
+[/savers]

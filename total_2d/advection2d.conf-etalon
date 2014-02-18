@@ -11,7 +11,8 @@ steps = STEPS_TEMPLATE
 		[material_node]
 		[/material_node]
 		[material]
-			c = 1
+			c_x = 1
+			c_y = 1
 		[/material]
 		[factory]
 			name = RectGridFactory
@@ -56,11 +57,16 @@ steps = STEPS_TEMPLATE
 	[initial]
 		order = 0
 		name = RegionInitial
+		independent = true
 		[region]
 			name = RectRegion
-			min = 40, 40
-			max = 60, 60
+			min = 0, 0
+			max = 100, 100
 		[/region]
+		[impulse]
+			name = Sin4Impulse
+			periods = 1
+		[/impulse]
 		[data]
 			v = 1.0
 		[/data]
