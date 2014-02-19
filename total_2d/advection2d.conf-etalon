@@ -18,7 +18,7 @@ steps = STEPS_TEMPLATE
 		[factory]
 			name = RectGridFactory
 			size = SIZE_TEMPLATE
-			origin = 0, 0
+			origin = -1, -1
 			spacing = SPACING_TEMPLATE
 		[/factory]
 		[schema]
